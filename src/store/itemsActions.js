@@ -1,5 +1,11 @@
 import axios from "axios";
 
+export const fetchItems = () => {
+  return {
+    type: "FETCH_ITEMS", // action to trigger Saga
+  };
+};
+
 export const fetchItemsRequest = () => {
   return {
     type: "FETCH_ITEMS_REQUEST",
@@ -20,7 +26,7 @@ export const fetchItemsFailure = (error) => {
   };
 };
 
-export const fetchItems = () => {
+/* export const fetchItems = () => {
   return (dispatch) => {
     dispatch(fetchItemsRequest());
     axios
@@ -33,4 +39,4 @@ export const fetchItems = () => {
         dispatch(fetchItemsFailure(error.message));
       });
   };
-};
+}; */
