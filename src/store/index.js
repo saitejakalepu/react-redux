@@ -21,8 +21,4 @@ const rootReducer = combineReducers({
   search: searchReducer,
   myitems: itemsReducer,
 });
-export const store = createStore(
-  rootReducer,
-  applyMiddleware(thunk)
-);
-
+export const store = createStore(rootReducer, applyMiddleware(thunk));
